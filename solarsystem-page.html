@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Discover the wonders of space! Explore the latest news on galaxies, planets, space missions, and the mysteries of the Universe. Learn more about astronomical discoveries and the exploration of outer space."
+        />
+        <meta name="keywords" content="Cosmos, solarsystem, mainpage" />
+        <meta name="author" content="Paweł Serkowski" />
+        <title>Cosmos | solar system</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/solarSystemPage.css" />
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    </head>
+    <body>
+        <div class="starsBackground">
+            <div class="starsBackgroundImg"></div>
+        </div>
+        <nav class="main-navigation">
+            <a href="./index.html">Home</a>
+
+            <div class="dropdown">
+                <a href="./moon-page.html">Moon</a>
+                <div class="dropdown-content">
+                    <a href="./moon-page.html#">Moon Info</a>
+                    <a href="./moon-page.html#gallery">Gallery</a>
+                </div>
+            </div>
+
+            <a href="./solarsystem-page.html" class="active">Solar system</a>
+        </nav>
+
+        <main class="wrapper">
+            <section class="section50-50">
+                <header>
+                    <h1>The Solar System Simulation</h1>
+                    <p>
+                        Welcome on simulation page. Here you can see how planets are rotating around the Sun and compare them to each other.
+                    </p>
+
+                    <p>
+                        You can change a combination of planets by check or uncheck boxes down below. Then you will see a difference between
+                        planet velocity (one Earth year is 4 seconds)
+                    </p>
+                </header>
+                <div class="checkboxContainer">
+                    <div class="checkboxHolder" id="checkboxHolder">
+                        <noscript><p>Run JS to configure a simulation</p></noscript>
+                    </div>
+                </div>
+            </section>
+            <section class="section50-50">
+                <div class="solarSystem">
+                    <div id="sun" class="planetCirlce"></div>
+                    <div id="mercury" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                    <div id="venus" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                    <div id="earth" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                    <div id="mars" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                    <div id="jupiter" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                    <div id="saturn" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                    <div id="uran" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                    <div id="neptun" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="./js/solar-simulation.js"></script>
+    </body>
+</html>

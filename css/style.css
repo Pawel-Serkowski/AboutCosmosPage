@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+    --lightColor: #ffffff;
+    --darkColor: #1e1e1e;
+
+    --pSize: 0.8rem;
+    --h1Size: 36px;
+    --h2Size: 24px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: var(--h1Size);
+}
+h2 {
+    font-size: var(--h2Size);
+    text-align: center;
+}
+p {
+    text-align: center;
+    font-size: var(--pSize);
+    line-height: 20px;
+}
+a {
+    text-decoration: none;
+    font-size: var(--pSize);
+    color: var(--lightColor);
+    cursor: pointer;
+}
+
+a.active {
+    border-bottom: solid 2px var(--lightColor);
+}
+
+body {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--darkColor);
+    color: var(--lightColor);
+    position: relative;
+
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+header {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header p {
+    margin-top: 20px;
+}
+
+header h1 {
+    text-align: center;
+}
+
+/*reusable classes*/
+.main-navigation {
+    width: 100%;
+    height: 50px;
+
+    position: sticky;
+    top: 0;
+
+    /* border: white solid 1px; */
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding-right: 20px;
+    z-index: 100;
+}
+.main-navigation a:hover {
+    border-bottom: 2px var(--lightColor) solid;
+}
+.main-navigation .dropdown {
+    position: relative;
+}
+
+/* Ukrycie rozwijanego menu */
+.main-navigation .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Styl dla opcji w rozwijanym menu */
+.main-navigation .dropdown-content a {
+    color: var(--lightColor);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Wyświetlenie rozwijanego menu po najechaniu na "Moon" */
+.main-navigation .dropdown:hover .dropdown-content {
+    background-color: rgba(159, 159, 159, 0.7);
+    display: block;
+}
+.main-navigation .dropdown-content a:first-child {
+    color: var(orange);
+}
+.main-navigation .dropdown-content a:last-child {
+    color: yellow;
+}
+
+.wrapper {
+    display: flex;
+    z-index: 1;
+    width: 100%;
+    overflow-x: hidden;
+    justify-content: space-around;
+    position: relative;
+}
+
+.section50-50 {
+    width: 50%;
+    height: calc(100vh - 45px);
+}
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 61px;
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+.button {
+    display: block;
+    outline: none;
+    border: none;
+
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--lightColor);
+    font-size: var(--pSize);
+    background: none;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 63px;
+    width: 226px;
+
+    cursor: pointer;
+    padding: 5px;
+
+    transition: all 0.4s ease;
+}
+
+.button.outline {
+    border: solid var(--lightColor) 5px;
+    border-radius: 24px;
+}
+.button.outline:hover {
+    background-color: var(--lightColor);
+    color: var(--darkColor);
+}
+
+.button.without:hover {
+    border-bottom: var(--lightColor) 3px solid;
+}
+
+.solarSystem {
+    width: 80%;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.planetCirlce {
+    position: absolute;
+
+    border: solid 2px var(--lightColor);
+    border-radius: 50%;
+
+    width: calc(var(--circleHeight));
+    height: calc(var(--circleHeight));
+
+    animation: planetRotation var(--planetSpeed) linear infinite;
+}
+
+.planet {
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: var(--planetHeight);
+    aspect-ratio: 1/1;
+    background-color: var(--planetColor);
+}
+#sun {
+    background-color: yellow;
+    width: 5%;
+    aspect-ratio: 1/1;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+#mercury {
+    --planetSpeed: 1.04s;
+    --planetHeight: 6%;
+    --circleHeight: 15%;
+    --planetColor: #957e5e;
+}
+#venus {
+    --planetSpeed: 2.48s;
+    --planetHeight: 7%;
+    --circleHeight: 25%;
+    --planetColor: #e3972e;
+}
+#earth {
+    --planetSpeed: 4s;
+    --planetHeight: 11%;
+    --circleHeight: 35%;
+    --planetColor: #4cddf0;
+}
+#mars {
+    --planetSpeed: 7.52s;
+    --planetHeight: 10%;
+    --circleHeight: 45%;
+    --planetColor: rgb(199, 24, 36);
+}
+#jupiter {
+    /* --planetSpeed: 47.52s; */
+    --planetSpeed: 12s;
+    --planetHeight: 10%;
+    --circleHeight: 57%;
+    --planetColor: rgb(255, 137, 11);
+}
+#saturn {
+    /* --planetSpeed: 117.84s; */
+    --planetSpeed: 14s;
+    --planetHeight: 7%;
+    --circleHeight: 70%;
+    --planetColor: rgb(152, 76, 14);
+}
+#uran {
+    /* --planetSpeed: 336s; */
+    --planetSpeed: 20s;
+    --planetHeight: 5%;
+    --circleHeight: 80%;
+    --planetColor: rgb(21, 114, 221);
+}
+#neptun {
+    /* --planetSpeed: 659s; */
+    --planetSpeed: 24s;
+    --planetHeight: 4.5%;
+    --circleHeight: 90%;
+    --planetColor: rgb(158, 13, 158);
+    --startRotatePosition: 30deg;
+}
+
+.greyModal {
+    width: 470px;
+    min-height: 600px;
+    border-radius: 35px;
+    background-color: rgba(159, 159, 159, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px;
+    gap: 36px;
+}
+
+.starsBackground {
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/stars2.jpeg");
+    background-repeat: repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.starsBackgroundImg {
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@keyframes planetRotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .section50-50 {
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+    }
+    .solarSystem {
+        width: 50vmin;
+    }
+    footer {
+        font-size: 12px;
+    }
+    :root {
+        --h1Size: 3.4vmin;
+        --h2Size: 3vmin;
+        --pSize: 0.7rem;
+    }
+    .main-navigation {
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+    .greyModal {
+        width: 70%;
+    }
+}

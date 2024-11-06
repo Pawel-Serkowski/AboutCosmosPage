@@ -1,0 +1,105 @@
+.checkboxContainer {
+    border-radius: 35px;
+    background-color: rgba(159, 159, 159, 0.3);
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.checkboxHolder {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 10px;
+}
+.checkboxHolder p {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 1rem;
+}
+.checkboxHolder p input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--lightColor);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0.1rem;
+    border: 0.25rem solid;
+    border-radius: 0.5rem;
+}
+
+.checkboxHolder input[type="checkbox"]::before {
+    content: "";
+    width: 1.4rem;
+    height: 1.4rem;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    transform: scale(0);
+    background-color: var(--darkColor);
+    transition: all 0.3s ease;
+}
+
+.checkboxHolder input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.hide {
+    display: none;
+}
+
+#mercury {
+    --planetSpeed: 1.04s;
+    --planetHeight: 15%;
+    --circleHeight: 15%;
+    --planetColor: rgb(37, 212, 31);
+    /* display: none; */
+}
+#venus {
+    --planetSpeed: 2.48s;
+    --planetHeight: 15%;
+    --circleHeight: 25%;
+    --planetColor: #e3972e;
+}
+#earth {
+    --planetSpeed: 4s;
+    --planetHeight: 11%;
+    --circleHeight: 35%;
+    --planetColor: #4cddf0;
+}
+#mars {
+    --planetSpeed: 7.52s;
+    --planetHeight: 10%;
+    --circleHeight: 45%;
+    --planetColor: rgb(199, 24, 36);
+}
+#jupiter {
+    --planetSpeed: 47.52s;
+    --planetHeight: 10%;
+    --circleHeight: 57%;
+    --planetColor: rgb(255, 137, 11);
+}
+#saturn {
+    --planetSpeed: 117.84s;
+    --planetHeight: 7%;
+    --circleHeight: 70%;
+    --planetColor: rgb(152, 76, 14);
+}
+#uran {
+    --planetSpeed: 336s;
+    --planetHeight: 5%;
+    --circleHeight: 80%;
+    --planetColor: rgb(21, 114, 221);
+}
+#neptun {
+    --planetSpeed: 659s;
+    --planetHeight: 4.5%;
+    --circleHeight: 90%;
+    --planetColor: rgb(158, 13, 158);
+    --startRotatePosition: 30deg;
+}

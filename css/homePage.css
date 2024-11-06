@@ -1,0 +1,15 @@
+.welcome-screen p,
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        flex-direction: column-reverse;
+    }
+    .section50-50 {
+        height: calc(50vh - 25px);
+        margin: 0;
+    }
+}

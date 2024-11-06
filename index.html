@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Discover the wonders of space! Explore the latest news on galaxies, planets, space missions, and the mysteries of the Universe. Learn more about astronomical discoveries and the exploration of outer space."
+        />
+        <meta name="keywords" content="Cosmos, solarsystem, mainpage" />
+        <meta name="author" content="Paweł Serkowski" />
+        <title>About Cosmos Page</title>
+
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/homePage.css" />
+
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.slim.js"
+            integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <nav class="main-navigation">
+            <a href="./index.html" class="active">Home</a>
+
+            <div class="dropdown">
+                <a href="./moon-page.html">Moon</a>
+                <div class="dropdown-content">
+                    <a href="./moon-page.html#">Moon Info</a>
+                    <a href="./moon-page.html#gallery">Gallery</a>
+                </div>
+            </div>
+
+            <a href="./solarsystem-page.html">Solar system</a>
+        </nav>
+        <main class="wrapper">
+            <section class="section50-50 welcome-screen">
+                <header>
+                    <h1>The Solar System</h1>
+                    <p>Curius about how the Solar system works on simulation Or maybe what state of moon cycle is right now?</p>
+                </header>
+
+                <div class="row">
+                    <a href="./moon-page.html" class="button outline">See moon section</a>
+                    <a href="./solarsystem-page.html" class="button without">See solar simulation</a>
+                </div>
+            </section>
+            <section class="section50-50">
+                <div class="solarSystem">
+                    <div id="sun" class="planetCirlce"></div>
+                    <div id="mercury" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                    <div id="venus" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                    <div id="earth" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                    <div id="mars" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                    <div id="jupiter" class="planetCirlce x">
+                        <div class="planet"></div>
+                    </div>
+
+                    <div id="saturn" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                    <div id="uran" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                    <div id="neptun" class="planetCirlce">
+                        <div class="planet"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>&copy; Wszelkie prawa zastrzezone - Paweł Serkowski</footer>
+    </body>
+</html>
