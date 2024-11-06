@@ -22,7 +22,7 @@ $ npm install
 ````
 And open it like casual website.
 
-##Additional
+## Additional
 If you wanna change something in JS code, you need to do it in TypeScript (*ts folder*)
 To apply changes and compile typescript you will need to run:
 ````
